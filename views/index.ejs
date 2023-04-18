@@ -4,15 +4,31 @@
   <body>
     <%- include('./partials/message.ejs') %>
     <div class="container">
-      <h1>Welcome to Home Page!</h1>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis odio
-        tempora quia quibusdam perspiciatis minima animi ipsam consequatur,
-        repudiandae officia ipsum. Voluptatibus vitae provident mollitia!
-        Tempora eveniet quaerat ducimus molestiae blanditiis, cumque possimus
-        asperiores sunt quisquam ad, repudiandae, harum odit dolorem porro
-        ullam. Excepturi, neque nemo facilis dignissimos quibusdam rerum.
-      </p>
+      <h1>Welcome!</h1>
+      <div class="details">
+        <table>
+          <tbody>
+            <tr>
+              <td class="heading">Project</td>
+              <td>Passport Dashboard</td>
+            </tr>
+            <tr>
+              <td class="heading">Creator</td>
+              <td>CHIRAG CHAKRABORTY</td>
+            </tr>
+            <tr>
+              <td class="heading">Source Code</td>
+              <td>
+                <a
+                  href="https://github.com/noobchirag69/passport_dashboard"
+                  target="_blank"
+                  >Link to GitHub Repo</a
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <a href="/login" class="btn">Login</a>
       <a href="/register" class="btn">Register</a>
     </div>
