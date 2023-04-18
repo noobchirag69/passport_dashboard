@@ -39,11 +39,11 @@ app.use(
     secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true,
-    cookie: {
-      secure: true,
-      httpOnly: true,
-      // maxAge: 2147483647, // Session won't expire
-    },
+    // cookie: {
+    //   secure: true,
+    //   httpOnly: true,
+    //   maxAge: 2147483647, // Session won't expire
+    // },
   })
 );
 
