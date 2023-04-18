@@ -4,14 +4,15 @@ const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
 const flash = require("connect-flash");
-require('dotenv').config(); // Environment Variables
 
 // Initiating Express
 const app = express();
 
 // Connecting to Database
+const dbURL =
+  "mongodb+srv://chiragchakraborty48:NDRa7ZVbEJntNkTn@cluster0.jdtucsp.mongodb.net/?retryWrites=true&w=majority";
 mongoose
-  .connect(process.env.dbURL, {
+  .connect(dbURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -36,14 +37,9 @@ require("./config/passport")(passport);
 // Express session
 app.use(
   session({
-    secret: process.env.SECRET,
+    secret: "2973e5bd77059ecec05db58b61f83e313fb14fd0",
     resave: true,
     saveUninitialized: true,
-    // cookie: {
-    //   secure: true,
-    //   httpOnly: true,
-    //   maxAge: 2147483647, // Session won't expire
-    // },
   })
 );
 
@@ -63,7 +59,7 @@ app.use(function (req, res, next) {
 });
 
 // Routes
-const routes = require("./routes/routes")
+const routes = require("./routes/routes");
 app.use(routes);
 
 // Default Error
