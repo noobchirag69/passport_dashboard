@@ -1,142 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Russo One', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Russo One", sans-serif;
 }
 
 body {
-    padding: 20px;
+  padding: 20px;
 }
 
 h1 {
-    letter-spacing: 3px;
-    margin-bottom: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
 }
 
 p {
-    margin-bottom: 30px;
-    text-align: justify;
+  margin-bottom: 30px;
+  text-align: justify;
 }
 
 .flash {
-    max-width: 1200px;
-    margin: 20px auto 0 auto;
-    font-size: 18px;
-    background: rgb(64, 64, 64);
-    color: #fff;
-    padding: 10px 50px;
+  max-width: 1200px;
+  margin: 20px auto 0 auto;
+  font-size: 18px;
+  background: rgb(64, 64, 64);
+  color: #fff;
+  padding: 10px 50px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    border: 2px solid #ccc;
-    padding: 50px;
+  max-width: 1200px;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  padding: 50px;
 }
 
 .btn {
-    background: rgb(64, 64, 64);
-    border: 2px solid rgb(64, 64, 64);
-    color: #fff;
-    text-decoration: none;
-    padding: 7px 20px;
+  background: rgb(64, 64, 64);
+  border: 2px solid rgb(64, 64, 64);
+  color: #fff;
+  text-decoration: none;
+  padding: 7px 20px;
 }
 
 .btn:hover {
-    background: transparent;
-    color: rgb(64, 64, 64);
+  background: transparent;
+  color: rgb(64, 64, 64);
 }
 
 .container-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    justify-content: space-between;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 form {
-    margin: 30px 0;
-    border: 2px solid #ccc;
-    padding: 40px;
+  margin: 30px 0;
+  border: 2px solid #ccc;
+  padding: 40px;
 }
 
 form input {
-    margin: 5px 0 10px 0;
-    padding: 8px;
-    width: 100%;
-    border: 2px solid #ccc;
+  margin: 5px 0 10px 0;
+  padding: 8px;
+  width: 100%;
+  border: 2px solid #ccc;
 }
 
 form button {
-    cursor: pointer;
-    padding: 7px 20px;
-    border: 2px solid rgb(64, 64, 64);
-    background-color: rgb(64, 64, 64);
-    color: #fff;
+  cursor: pointer;
+  padding: 7px 20px;
+  border: 2px solid rgb(64, 64, 64);
+  background-color: rgb(64, 64, 64);
+  color: #fff;
 }
 
 form button:hover {
-    background-color: transparent;
-    color: rgb(64, 64, 64);
+  background-color: transparent;
+  color: rgb(64, 64, 64);
 }
 
 .details {
-    overflow-x: auto;
-    margin: 20px 0 30px 0;
+  overflow-x: auto;
+  margin: 20px 0 30px 0;
 }
 
 table {
-    border: 2px solid #ccc;
-    border-collapse: collapse;
+  border: 2px solid #ccc;
+  border-collapse: collapse;
 }
 
 td {
-    border: 2px solid #ccc;
-    padding: 8px 20px;
+  border: 2px solid #ccc;
+  padding: 8px 20px;
 }
 
 .heading {
-    background-color: rgb(64, 64, 64);
-    color: #fff;
+  background-color: rgb(64, 64, 64);
+  color: #fff;
 }
 
 /* Media Query */
 @media only screen and (max-width: 768px) {
-    .container-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
+  .container-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    form button {
-        display: block;
-        margin-bottom: 8px;
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .flash {
-        font-size: 12px;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .container {
-        border: none;
-        padding: 0;
-    }
-    h1 {
-        font-size: 24px;
-    }
-    a {
-        font-size: 12px;
-    }
-    form {
-        border: none;
-        padding: 0;
-    }
+  .flash {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .container {
+    border: none;
+    padding: 0;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  a {
+    font-size: 12px;
+  }
+  form {
+    border: none;
+    padding: 0;
+  }
+  form button {
+    display: block;
+    margin-bottom: 8px;
+  }
 }
