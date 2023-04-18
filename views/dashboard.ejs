@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/message.ejs') %>
+    <div class="container">
+      <h1>Welcome to your Dashboard!</h1>
+      <h3>Account Details:</h3>
+      <div class="details">
+        <table>
+          <tbody>
+            <tr>
+              <td class="heading">Name</td>
+              <td><%= user.name %></td>
+            </tr>
+            <tr>
+              <td class="heading">Email</td>
+              <td><%= user.email %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a
+        href="/logout"
+        class="btn"
+        onclick="return confirm('Logout of the current session?')"
+        >Logout</a
+      >
+    </div>
+  </body>
+</html>

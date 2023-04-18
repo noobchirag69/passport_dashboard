@@ -1,0 +1,17 @@
+<% if(locals.errors){ %> <% errors.forEach(function(error) { %>
+<div class="flash">
+  <%= error.msg %>
+</div>
+<% }); %> <% } %> <% if(success_msg != ''){ %>
+<div class="flash">
+  <%= success_msg %>
+</div>
+<% } %> <% if(error_msg != ''){ %>
+<div class="flash">
+  <%= error_msg %>
+</div>
+<% } %> <% if(error != ''){ %>
+<div class="flash">
+  <%= error %>
+</div>
+<% } %>

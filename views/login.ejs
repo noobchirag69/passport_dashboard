@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/message.ejs') %>
+    <div class="container">
+      <h1>Login to your Account</h1>
+      <a href="/" class="btn">Back to Home</a>
+      <div class="container-grid">
+        <form action="/login" method="POST">
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="name@example.com"
+            required
+          /><br />
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your Password"
+            required
+          /><br />
+          <button type="submit">Login</button>
+          <!-- <button>Forgot Password</button> -->
+        </form>
+        <div class="grid-2">
+            <h1>Don't have an account?</h1>
+            <a href="/register" class="btn">Create Account</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

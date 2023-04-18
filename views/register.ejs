@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head.ejs') %>
+  <body>
+    <%- include('./partials/message.ejs') %>
+    <div class="container">
+      <h1>Create a new Account</h1>
+      <a href="/" class="btn">Back to Home</a>
+      <div class="container-grid">
+        <form action="/register" method="POST">
+          <label for="name">Name</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="e.g., John Doe"
+            required
+          /><br />
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="name@example.com"
+            required
+          /><br />
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your Password"
+            required
+          /><br />
+          <label for="confirmPassword">Confirm Password</label><br />
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your Password"
+            required
+          /><br />
+          <button type="submit">Register</button>
+        </form>
+        <div class="grid-2">
+          <h1>Already have an account?</h1>
+          <a href="/login" class="btn">Login</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
