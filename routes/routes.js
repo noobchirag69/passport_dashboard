@@ -30,6 +30,14 @@ router.get("/dashboard", ensureAuthenticated, (req, res) =>
   })
 );
 
+// Update Profile Route
+router.get("/edit", ensureAuthenticated, (req, res) =>
+  res.render("edit", {
+    user: req.user,
+    title: "Update",
+  })
+);
+
 // Create a New Account
 router.post("/register", (req, res) => {
   const { name, email, password, confirmPassword } = req.body;
@@ -109,6 +117,21 @@ router.post(
     res.redirect("/dashboard");
   }
 );
+
+// Update Profile
+router.post("/edit/:id", (req, res) => {
+  const id = req.params.id;
+  const updatedUser = req.body;
+  User.findByIdAndUpdate(id, updatedUser)
+    .then((result) => {
+      req.flash(
+        "success_msg",
+        "You have successfully updated your User Profile!"
+      );
+      res.redirect("/dashboard");
+    })
+    .catch((err) => console.log(err));
+});
 
 // Logout
 router.get("/logout", (req, res) => {
